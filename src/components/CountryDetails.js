@@ -28,7 +28,11 @@ const CountryDetails = () => {
           <h4>
             {data.name.common} borders
             {data.borders.map((border) => (
-              <Link to={`/countries/${border}`} style={styles}>
+              <Link
+                key={data.alpha3Code}
+                to={`/countries/${border}`}
+                style={styles}
+              >
                 {border}
               </Link>
             ))}
